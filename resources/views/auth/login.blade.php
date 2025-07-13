@@ -12,7 +12,7 @@
 <body>
 
     <div class="w-50 position-absolute top-50 start-50 translate-middle">
-        <h1 class="text-center text-primary" style="font-weight:800">LOGIN</h1>
+        <h1 class="text-center text-primary" style="font-weight:800">LOGIN ADMIN</h1>
         <form action="#" method="POST">
             @csrf
             <div class="mb-3">
