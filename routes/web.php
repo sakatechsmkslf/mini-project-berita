@@ -13,3 +13,6 @@ Route::get('/login', [AuthController::class, 'viewLogin']);
 
 
 // Route::view('/login', 'auth.login')->name('login');
+Route::view('/dahboard', 'dashboard.index')->name('main');
+
+Route::view('kategori', 'kategori.index')->name('kategori');
