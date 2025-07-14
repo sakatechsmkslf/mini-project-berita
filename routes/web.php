@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('login', [AuthController::class, 'Login'])->name('login');
+Route::get('/login', [AuthController::class, 'viewLogin']);
 
-Route::view('/login', 'auth.login')->name('login');
+
+
+// Route::view('/login', 'auth.login')->name('login');
