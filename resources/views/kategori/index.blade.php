@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Kategori</h1>
-</body>
-</html>
+@extends('layout.main')
+@section('konten')
+    <div class="card p-3 bg-dark">
+        <h3 class="text-white">KATEGORI📝</h3>
+        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis animi rem odit quam velit,
+            commodi architecto earum quos eos quo! Suscipit iure, mollitia quo quae deserunt reprehenderit. Sunt, at odio!
+        </p>
+    </div>
+@endsection
