@@ -14,9 +14,10 @@ Route::get('/login', [AuthController::class, 'viewLogin']);
 Route::resource('category', CategoryController::class);
 
 // Route::view('/login', 'auth.login')->name('login');
-Route::view('/dahboard', 'dashboard.index')->name('main');
+Route::view('/dashboard', 'dashboard.index')->name('main');
 
 // Route::view('kategori', 'kategori.index')->name('kategori');
+Route::view('/tag', 'tag.index')->name('tag');
 
 
 Route::view('/tambahKategori', 'kategori.tambah')->name('tambahKategori');
