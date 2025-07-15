@@ -17,8 +17,7 @@ return new class extends Migration
             $table->string('isi_berita');
             $table->string('path_file');
             $table->enum('status', ['published', 'pending', 'not published']);
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->foreignId('berita_tag_id')->constrained()->onDelete('cascade');
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
