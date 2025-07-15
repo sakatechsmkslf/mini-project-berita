@@ -14,7 +14,7 @@ class CategoryController extends Controller
     public function index()
     {
         $data = Category::all();
-        return view('tes.category.index', compact('data'));
+        return view('kategori.index', compact('data'));
     }
 
     /**
@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('tes.category.add');
+        return view('kategori.tambah');
     }
 
     /**
@@ -57,7 +57,7 @@ class CategoryController extends Controller
     public function edit(string $id)
     {
         $data = Category::findOrFail($id);
-        return view('tes.category.edit', compact('data'));
+        return view('kategori.edit', compact('data'));
     }
 
     /**
