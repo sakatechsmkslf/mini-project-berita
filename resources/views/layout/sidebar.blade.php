@@ -4,7 +4,7 @@
                <a href="" class="nav-link text-white">Dashboard</a>
            </li>
            <li class="nav-item">
-               <a href="{{ route('kategori') }}" class="nav-link text-white">Kategori</a>
+               <a href="{{ route('category.index') }}" class="nav-link text-white">Kategori</a>
            </li>
            <li class="nav-item">
                <a href="" class="nav-link text-white">Tag</a>
