@@ -14,7 +14,7 @@ class TagController extends Controller
     public function index()
     {
         $data = Tag::all();
-        return view('tes.tag.index', compact('data'));
+        return view('tag.index', compact('data'));
     }
 
     /**
@@ -22,7 +22,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('tes.tag.add');
+        return view('tag.tambah');
     }
 
     /**
@@ -58,7 +58,7 @@ class TagController extends Controller
     public function edit(string $id)
     {
         $data = Tag::findOrFail($id);
-        return view('tes.tag.edit', compact('data'));
+        return view('tag.edit', compact('data'));
     }
 
     /**
