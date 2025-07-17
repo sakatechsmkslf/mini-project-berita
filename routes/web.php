@@ -18,5 +18,6 @@ Route::resource('tag', TagController::class);
 Route::resource('berita', BeritaController::class);
 
 Route::view('/dashboard', 'dashboard.index')->name('main');
+// Route::view('/berita', 'berita.index')->name('berita');
 
 Route::view('/tambahKategori', 'kategori.tambah')->name('tambahKategori');
