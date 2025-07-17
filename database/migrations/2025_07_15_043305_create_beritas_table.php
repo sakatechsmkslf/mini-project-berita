@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('beritas', function (Blueprint $table) {
             $table->id();
             $table->string('judul_berita');
-            $table->string('isi_berita');
+            $table->text('isi_berita');
             $table->string('path_file');
             $table->enum('status', ['published', 'pending', 'not published']);
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
