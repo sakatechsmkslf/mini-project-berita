@@ -16,9 +16,11 @@ class AuthController extends Controller
         if(auth('web')->attempt($credential))
         {
             echo 'Anda Berhasil Login';
+            return redirect()->route('main');
         } else {
             echo 'Password Atau Email Salah';
         }
+
     }
 
     public function viewLogin()
