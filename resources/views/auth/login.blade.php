@@ -166,13 +166,14 @@
             <div class="col-lg-6 col-md-8 login-box">
                 <div class="col-lg-12 login-key">
                     <i class="fa fa-key" aria-hidden="true"></i>
+                    <img src="{{ asset('logo.png') }}" alt="" srcset="" width="100px">
                 </div>
                 <div class="col-lg-12 login-title">
                     LOGIN ADMIN
                 </div>
 
                 <div class="col-lg-12 login-form">
-                    <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form px-4">
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="form-group">
@@ -189,7 +190,7 @@
 
                             <div class="col-lg-12 loginbttm position-relative">
                                 <div class="col-lg-6 login-btm login-button ms-5">
-                                    <button type="submit" class="btn btn-outline-primary ">LOGIN</button>
+                                    <button type="submit" class="btn btn-outline-primary rounded">LOGIN</button>
                                 </div>
                             </div>
                         </form>
