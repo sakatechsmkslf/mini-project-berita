@@ -11,7 +11,7 @@
                     <td>Aksi</td>
                 </thead>
                 <tr>
-                    @foreach ($data as $item)
+                    @foreach ($kategori as $item)
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->nama }}</td>
                         <td class="d-flex">
@@ -22,7 +22,7 @@
                                 <button class="btn btn-danger" type="submit">hapus</button>
                             </form>
                         </td>
-                    @endforeach 
+                    @endforeach
                 </tr>
             </table>
         </div>

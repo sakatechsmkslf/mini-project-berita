@@ -37,3 +37,4 @@
         <script>new DataTable('#table_berita')</script>
     @endpush
 @endsection
+

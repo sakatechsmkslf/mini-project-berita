@@ -10,7 +10,7 @@
                     <td>Nama</td>
                     <td>Aksi</td>
                 </thead>
-                @foreach ($data as $item)
+                @foreach ($tag as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->nama }}</td>
