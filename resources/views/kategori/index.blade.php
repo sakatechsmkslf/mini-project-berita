@@ -10,20 +10,20 @@
                     <td>Nama</td>
                     <td>Aksi</td>
                 </thead>
-                <tr>
-                    @foreach ($kategori as $item)
+                @foreach ($kategori as $item)
+                    <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->nama }}</td>
                         <td class="d-flex">
                             <a href="{{ route('category.edit', $item->id) }}" class="btn btn-primary">edit</a>
-                            <form action="{{route('category.destroy', $item->id)}}" method="POST">
+                            <form action="{{ route('category.destroy', $item->id) }}" method="POST">
                                 @csrf
                                 @method('delete')
                                 <button class="btn btn-danger" type="submit">hapus</button>
                             </form>
                         </td>
-                    @endforeach
-                </tr>
+                    </tr>
+                @endforeach
             </table>
         </div>
     </div>

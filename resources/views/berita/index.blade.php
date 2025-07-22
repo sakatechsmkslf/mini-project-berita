@@ -13,8 +13,8 @@
                     <td class="text-center">Kategori</td>
                     <td class="text-center">Aksi</td>
                 </thead>
+                @foreach ($berita as $item)
                 <tr>
-                    @foreach ($data as $item)
                         <td class="text-center">{{ $loop->iteration }}</td>
                         <td class="text-center">{{ $item->judul_berita }}</td>
                         <td class="text-center">{{ $item->path_file }}</td>
@@ -28,8 +28,8 @@
                                 <button class="btn btn-danger" type="submit">hapus</button>
                             </form>
                         </td>
-                    @endforeach 
-                </tr>
+                    </tr>
+                    @endforeach
             </table>
         </div>
     </div>

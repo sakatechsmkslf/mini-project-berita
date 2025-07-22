@@ -27,6 +27,6 @@ class Berita extends Model
      */
     public function tag(): BelongsToMany
     {
-        return $this->belongsToMany(Tag::class, 'berita_tag');
+        return $this->belongsToMany(Tag::class, 'berita_tags');
     }
 }
