@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<a href="{{ route('berita.create') }}" class="btn btn-primary">Tambah Data</a>
+    <a href="{{ route('berita.create') }}" class="btn btn-primary">Tambah Data</a>
 </body>
 </html>

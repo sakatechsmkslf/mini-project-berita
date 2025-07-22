@@ -17,7 +17,7 @@
 
                 <div class="mb-3">
                     <label>isi berita</label>
-                    <textarea class="form-control" name="content" id="summernote"></textarea>
+                    <textarea class="form-control" name="isi_berita" id="summernote"></textarea>
                 </div>
                 <div class="mb-3">
                     <label>gambar</label>
@@ -38,24 +38,22 @@
 
                 <div class="mb-3">
                     <label>Kategori</label><br>
-                    {{-- @foreach ($data as $item)
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="tag_id[]" value="{{ $item->id }}"
-                                {{ collect(old('tag_id'))->contains($item->id) ? 'checked' : '' }}>
-                            <label class="form-check-label">{{ $item->nama_tag }}</label>
-                        </div>
-                    @endforeach --}}
+                    <select name="category_id" id="">
+                        @foreach ($kategori as $item)
+                            <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <div class="mb-3">
                     <label>Tag</label><br>
-                    {{-- @foreach ($data as $item)
+                    @foreach ($tag as $item)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="tag_id[]" value="{{ $item->id }}"
+                            <input class="form-check-input" type="checkbox" name="tag_id[]" value="{{ $item->id }}"
                                 {{ collect(old('tag_id'))->contains($item->id) ? 'checked' : '' }}>
-                            <label class="form-check-label">{{ $item->nama_tag }}</label>
+                            <label class="form-check-label">{{ $item->nama }}</label>
                         </div>
-                    @endforeach --}}
+                    @endforeach
                 </div>
 
                 <button type="submit" class="btn btn-primary" class="form-control mb-3">Tambah</button>
