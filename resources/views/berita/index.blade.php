@@ -14,7 +14,7 @@
                     <td class="text-center">Aksi</td>
                 </thead>
                 @foreach ($berita as $item)
-                <tr>
+                    <tr>
                         <td class="text-center">{{ $loop->iteration }}</td>
                         <td class="text-center">{{ $item->judul_berita }}</td>
                         <td class="text-center">{{ $item->path_file }}</td>
@@ -29,7 +29,7 @@
                             </form>
                         </td>
                     </tr>
-                    @endforeach
+                  @endforeach
             </table>
         </div>
     </div>
