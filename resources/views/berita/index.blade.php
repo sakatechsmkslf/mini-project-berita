@@ -14,7 +14,7 @@
                     <td class="text-center">Aksi</td>
                 </thead>
                 <tr>
-                    @foreach ($data as $item)
+                    @foreach ($berita as $item)
                         <td class="text-center">{{ $loop->iteration }}</td>
                         <td class="text-center">{{ $item->judul_berita }}</td>
                         <td class="text-center">{{ $item->path_file }}</td>
@@ -37,3 +37,4 @@
         <script>new DataTable('#table_berita')</script>
     @endpush
 @endsection
+

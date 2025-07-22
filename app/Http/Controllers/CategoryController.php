@@ -13,8 +13,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data = Category::all();
-        return view('kategori.index', compact('data'));
+        $kategori = Category::all();
+        return view('kategori.index', compact('kategori'));
     }
 
     /**
@@ -56,8 +56,8 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        $data = Category::findOrFail($id);
-        return view('kategori.edit', compact('data'));
+        $kategori = Category::findOrFail($id);
+        return view('kategori.edit', compact('kategori'));
     }
 
     /**
