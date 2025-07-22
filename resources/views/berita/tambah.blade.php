@@ -7,7 +7,7 @@
 @section('konten')
     <div class="card p-3  text-black">
         <h3>Tambah Data Berita</h3>
-        <form action="{{ route('berita.store') }}" method="POST">
+        <form action="{{ route('berita.store') }}" method="POST" enctype="multipart/form-data">
             <div class="">
                 @csrf
                 <div class="mb-3">

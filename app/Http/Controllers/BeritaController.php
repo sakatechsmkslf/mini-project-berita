@@ -38,24 +38,25 @@ class BeritaController extends Controller
         $validator = Validator::make($request->all(), [
             'judul_berita' => 'required',
             'isi_berita' => 'required',
-            'path_file' => 'required|mimes:png,jpg',
+            'path_file' => 'required',
             'status' => 'required',
-            'tag' => 'required'
+            // 'tag' => 'required'
         ]);
 
         if ($validator->fails()) {
-            return redirect()->route('tag.create')->withErrors($validator)->withInput();
+            return redirect()->route('berita.create')->withErrors($validator)->withInput();
         }
 
-        $imageName = time() . '.' . $request->image->extension();
+        $imageName = time() . '.' . $request->path_file->extension();
 
-        $request->image->move(public_path('images'), $imageName);
+        $request->path_file->move(public_path('images'), $imageName);
 
         $berita = Berita::create([
             'judul_berita' => $request->judul_berita,
             'isi_berita' => $request->isi_berita,
             'path_file' => $imageName,
-            'status' => $request->status
+            'status' => $request->status,
+            'category_id' => $request->category_id
         ]);
 
         $berita->tag()->attach($request->tag_id);
@@ -95,7 +96,7 @@ class BeritaController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->route('tag.create')->withErrors($validator)->withInput();
+            return redirect()->route('berita.create')->withErrors($validator)->withInput();
         }
 
         $imageName = time() . '.' . $request->image->extension();
