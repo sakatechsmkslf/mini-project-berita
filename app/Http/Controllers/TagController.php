@@ -13,7 +13,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        $data = Tag::all();
+        $tag = Tag::all();
         return view('tag.index', compact('data'));
     }
 
@@ -57,7 +57,7 @@ class TagController extends Controller
      */
     public function edit(string $id)
     {
-        $data = Tag::findOrFail($id);
+        $tag = Tag::findOrFail($id);
         return view('tag.edit', compact('data'));
     }
 

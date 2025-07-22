@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Category;
 use Illuminate\Http\Client\ResponseSequence;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -14,7 +15,7 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $data = Berita::all();
+        $berita = Berita::all();
         return view('berita.index', compact('data'));
     }
 
@@ -23,6 +24,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
+        $kategori = Category::all();
         return view('berita.tambah');
     }
 
@@ -72,7 +74,7 @@ class BeritaController extends Controller
      */
     public function edit(string $id)
     {
-        $data = Berita::find($id);
+        $berita = Berita::find($id);
         return view('', compact('data'));
     }
 
