@@ -20,4 +20,4 @@ Route::resource('berita', BeritaController::class);
 Route::view('/dashboard', 'dashboard.index')->name('main');
 
 Route::view('/tambahKategori', 'kategori.tambah')->name('tambahKategori');
-Route::view('/bt', 'berita.tambah')->name('beritaTambah');
+// Route::view('/bt', 'berita.tambah')->name('beritaTambah');

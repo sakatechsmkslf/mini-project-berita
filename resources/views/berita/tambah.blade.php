@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label>Kategori</label><br>
+                    <label>Tag</label><br>
                     {{-- @foreach ($data as $item)
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="tag_id[]" value="{{ $item->id }}"
