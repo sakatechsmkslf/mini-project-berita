@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
+use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -26,5 +29,13 @@ class AuthController extends Controller
     public function viewLogin()
     {
         return view('auth.login');
+    }
+
+    public function dashboard()
+    {
+        $berita = Berita::all();
+        $tag = Tag::all();
+        $kategori = Category::all();
+        return view('dashboard.index', compact(['berita', 'tag', 'kaetgori']));
     }
 }
