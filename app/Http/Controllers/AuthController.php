@@ -36,6 +36,6 @@ class AuthController extends Controller
         $berita = Berita::all();
         $tag = Tag::all();
         $kategori = Category::all();
-        return view('dashboard.index', compact(['berita', 'tag', 'kaetgori']));
+        return view('dashboard.index', compact(['berita', 'tag', 'kategori']));
     }
 }
