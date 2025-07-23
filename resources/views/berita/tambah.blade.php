@@ -27,6 +27,10 @@
                 <div class="mb-3">
                     <label>status</label><br>
                     <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="status" value="published">
+                        <label>not published</label>
+                    </div>
+                    <div class="form-check form-check-inline">
                         <input type="radio" class="form-check-input" name="status" value="pending">
                         <label>pending</label>
                     </div>

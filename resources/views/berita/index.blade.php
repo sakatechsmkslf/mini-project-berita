@@ -29,7 +29,7 @@
                             </form>
                         </td>
                     </tr>
-                  @endforeach
+                @endforeach
             </table>
         </div>
     </div>
@@ -37,4 +37,3 @@
         <script>new DataTable('#table_berita')</script>
     @endpush
 @endsection
-

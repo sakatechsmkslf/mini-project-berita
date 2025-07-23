@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\BeritiusController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,4 @@ Route::view('/dashboard', 'dashboard.index')->name('main');
 
 Route::view('/tambahKategori', 'kategori.tambah')->name('tambahKategori');
 // Route::view('/bt', 'berita.tambah')->name('beritaTambah');
+
