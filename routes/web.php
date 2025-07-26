@@ -13,12 +13,13 @@ Route::get('/', function () {
 
 Route::post('login', [AuthController::class, 'Login'])->name('login');
 Route::get('/login', [AuthController::class, 'viewLogin']);
+Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('main');
 
 Route::resource('category', CategoryController::class);
 Route::resource('tag', TagController::class);
 Route::resource('berita', BeritaController::class);
 
-Route::view('/dashboard', 'dashboard.index')->name('main');
+// Route::view('/dashboard', 'dashboard.index')->name('main');
 // Route::view('/berita', 'berita.index')->name('berita');
 
 Route::view('/tambahKategori', 'kategori.tambah')->name('tambahKategori');
